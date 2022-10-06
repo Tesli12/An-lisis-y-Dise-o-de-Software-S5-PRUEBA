@@ -1,48 +1,45 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tiendadeabarrotes_Clases;
 
-package proyecto.tienda.de.refacciones.Clases;
-
-public abstract class Empleado extends Persona {
-    private String Usuario;
+/**
+ *
+ * @author Francisco
+ */
+public abstract class  Empleado extends Usuario {
+    private String ID_Empleado;
     private String Contrasenia;
     private float Sueldo;
-    private int DiasDescanso;
     private String Puesto;
+    private String Rol;
     private String Observaciones;
     
-    public Empleado(){
-       this.Usuario=null;
-       this.Contrasenia=null;
-       this.DiasDescanso=0;
-       this.Sueldo=0;
-       this.Puesto=null;
-       this.Observaciones=null;
     
-    
-    }
-
-     Empleado(String Usuario, String Contrasenia, float Sueldo, int DiasDescanso, String Puesto
-            , String Observaciones, String Nombre, String ApellidoPaterno, String ApellidoMaterno, String CorreoElectronico, int Telefono) {
+    Empleado(String ID_Empleado, String Contrasenia, float Sueldo, String Puesto, String Observaciones , String Rol, String Nombre, String ApellidoPaterno, String ApellidoMaterno, String CorreoElectronico, int Telefono) {
         super(Nombre, ApellidoPaterno, ApellidoMaterno, CorreoElectronico, Telefono);
-        this.Usuario = Usuario;
+        this.ID_Empleado =ID_Empleado;
         this.Contrasenia = Contrasenia;
         this.Sueldo = Sueldo;
-        this.DiasDescanso = DiasDescanso;
         this.Puesto = Puesto;
+        this.Rol=Rol;
         this.Observaciones = Observaciones;
     }
 
     /**
-     * @return the Usuario
+     * @return the ID_Empleado
      */
-    public String getUsuario() {
-        return Usuario;
+    public String getID_Empleado() {
+        return ID_Empleado;
     }
 
     /**
-     * @param Usuario the Usuario to set
+     * @param ID_Empleado the ID_Empleado to set
      */
-    public void setUsuario(String Usuario) {
-        this.Usuario = Usuario;
+    public void setID_Empleado(String ID_Empleado) {
+        this.ID_Empleado = ID_Empleado;
     }
 
     /**
@@ -73,19 +70,7 @@ public abstract class Empleado extends Persona {
         this.Sueldo = Sueldo;
     }
 
-    /**
-     * @return the DiasDescanso
-     */
-    public int getDiasDescanso() {
-        return DiasDescanso;
-    }
-
-    /**
-     * @param DiasDescanso the DiasDescanso to set
-     */
-    public void setDiasDescanso(int DiasDescanso) {
-        this.DiasDescanso = DiasDescanso;
-    }
+    
 
     /**
      * @return the Puesto
@@ -102,6 +87,20 @@ public abstract class Empleado extends Persona {
     }
 
     /**
+     * @return the Rol
+     */
+    public String getRol() {
+        return Rol;
+    }
+
+    /**
+     * @param Rol the Rol to set
+     */
+    public void setRol(String Rol) {
+        this.Rol = Rol;
+    }
+
+    /**
      * @return the Observaciones
      */
     public String getObservaciones() {
@@ -114,6 +113,7 @@ public abstract class Empleado extends Persona {
     public void setObservaciones(String Observaciones) {
         this.Observaciones = Observaciones;
     }
- 
+    
+    
     
 }

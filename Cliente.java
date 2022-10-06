@@ -1,47 +1,52 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tiendadeabarrotes_Clases;
 
-package proyecto.tienda.de.refacciones.Clases;
-
-public class Cliente extends Persona{
+/**
+ *
+ * @author Francisco
+ */
+public abstract class Cliente extends Usuario {
+    private String ID_Cliente;
+    private String Tipo;
     
-    protected int Folio;
-    protected String general;
-    
-    public Cliente(){}
-
-    public Cliente(int Folio, String general, String Nombre, String ApellidoPaterno, String ApellidoMaterno, String CorreoElectronico, int Telefono) {
+    Cliente(String ID_Cliente, String Tipo, String Nombre, String ApellidoPaterno, String ApellidoMaterno, String CorreoElectronico, int Telefono) {
         super(Nombre, ApellidoPaterno, ApellidoMaterno, CorreoElectronico, Telefono);
-        this.Folio = Folio;
-        this.general= general;
+        this.ID_Cliente =ID_Cliente;
+        this.Tipo=Tipo;
     }
-
-  
-
+    
     /**
-     * @return the Folio
+     * @return the ID_Cliente
      */
-    public int getFolio() {
-        return Folio;
+    public String getID_Cliente() {
+        return ID_Cliente;
     }
 
     /**
-     * @param Folio the Folio to set
+     * @param ID_Cliente the ID_Cliente to set
      */
-    public void setFolio(int Folio) {
-        this.Folio = Folio;
+    public void setID_Cliente(String ID_Cliente) {
+        this.ID_Cliente = ID_Cliente;
     }
 
     /**
-     * @return the general
+     * @return the Tipo
      */
-    public String getGeneral() {
-        return general;
+    public String getTipo() {
+        return Tipo;
     }
 
     /**
-     * @param general the general to set
+     * @param ID_Tipo the ID_Tipo to set
      */
-    public void setGeneral(String general) {
-        this.general = general;
+    public void setID_Tipo(String ID_Tipo) {
+        this.Tipo = Tipo;
     }
+    
+    
     
 }
